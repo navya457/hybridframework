@@ -347,26 +347,6 @@ public class CommonConfig extends AppiumService{
 	}
 	
 
-//	public static void customWait(long secs) throws InterruptedException{
-//		Thread.sleep(secs) ;
-//	}
-//
-//	public void softAssert_true(boolean check, String message){
-//		
-//		Soft
-//		SoftAssert softAssert = new SoftAssert();
-//		softAssert.assertTrue(check, message); 
-//	}
-//
-//	public void softAssert_false(){
-//		SoftAssert softAssertFail = new SoftAssert();
-//		softAssertFail.fail();
-//	}		 
-//
-//	public void softAssert_equals(String actual, String expected){
-//		SoftAssert softAssertFail = new SoftAssert();
-//		softAssertFail.assertEquals(actual, expected);
-//	}
 
 	public void scrollAlittle() throws InterruptedException{
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -456,43 +436,7 @@ public class CommonConfig extends AppiumService{
 		   return check;
 		  }
 		 }
-//	public String Verify(io.appium.java_client.android.AndroidElement driver) {
-//
-//		String result = null;
-//		File scrFile = driver.getScreenshotAs(OutputType.FILE);
-//		ITesseract instance = new Tesseract();
-//		try {
-//			result = instance.doOCR(scrFile);
-//		} catch (Exception e) {
-//			System.out.println(e.getMessage());
-//		}
-//		return result;
-//	}
-//	public String takeScreenShot() {
-//
-//		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); 
-//
-//		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
-//
-//		new File(scrShotDir).mkdirs(); // Create folder under project with name
-//		// "screenshots" if doesn't exist
-//		destFile = dateFormat.format(new Date()) + ".png"; // Set file name
-//		// using current
-//		// date time.
-//		try {
-//			FileUtils.copyFile(scrFile, new File(scrShotDir + "/" + destFile)); // Copy
-//			// paste
-//			// file
-//			// at
-//			// destination
-//			// folder
-//			// location
-//		} catch (IOException e) {
-//			APP_LOGS.info("Image not transfered to screenshot folder");
-//			e.printStackTrace();
-//		}
-//		return destFile;
-//	}
+//	
 	public void scroll() {
 		try {
 			org.openqa.selenium.Dimension size =driver.manage().window().getSize();
