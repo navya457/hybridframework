@@ -383,41 +383,7 @@ public class CommonConfig extends AppiumService{
 			e.printStackTrace();
 		}
 	}
-	public void stopAdbLog(String TCName) throws InterruptedException, AWTException, IOException {
-		Thread.sleep(1000);
-		Runtime.getRuntime().exec("taskkill /IM cmd.exe");
-		/*
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_C);
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_C);
-		 */
-	}	
-//	public static String captureScreenshot(String methodName) throws IOException{
-//
-//		Calendar cal = new GregorianCalendar();
-//		int month = cal.get(Calendar.MONTH);
-//		int year = cal.get(Calendar.YEAR);
-//		int sec = cal.get(Calendar.SECOND);
-//		int min = cal.get(Calendar.MINUTE);
-//		int date = cal.get(Calendar.DATE);
-//		int day = cal.get(Calendar.HOUR_OF_DAY);
-//		String mailscreenshotpath = null;
-//
-//		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//		try {
-//			mailscreenshotpath = System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\"+methodName+"_"+year+"_"+date+"_"+(month+1)+"_"+day+"_"+min+"_" +sec+".jpg";
-//			
-//			FileUtils.copyFile(scrFile, new File(mailscreenshotpath));
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return mailscreenshotpath;
-//	}
 	
-	//till correct
 	
 	public boolean scrollToText(String text) {
 		  /*
@@ -436,7 +402,7 @@ public class CommonConfig extends AppiumService{
 		   return check;
 		  }
 		 }
-//	
+	
 	public void scroll() {
 		try {
 			org.openqa.selenium.Dimension size =driver.manage().window().getSize();
