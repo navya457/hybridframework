@@ -1,0 +1,9 @@
+{
+"platformName":"android",
+"platforVersion":"9",
+"devicename":"Galaxy J7 Pro",
+"UDID":"52001a30b48594f1",
+"appPackage":"io.nativebase.market.geekyants.taxiappdriver",
+"appActivity":"io.nativebase.market.geekyants.taxiappdriver.MainActivity"
+
+}
