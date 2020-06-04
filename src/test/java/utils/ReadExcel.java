@@ -52,12 +52,9 @@ public ReadExcel(String path)
 		for(int row=dataStartRowNum; row<dataStartRowNum+rows;row++){
 			Hashtable<String, String> table =new Hashtable<String,String>();
 			for(int col=0;col<cols;col++){
-				
-				
-				//System.out.println(excel.getCellData(sheetName, col, row));
-				String Testdata = excel.getCellData(sheetName, col, row);
-				String colName = excel.getCellData(sheetName, col, colsStartRowNum);
-				table.put(colName, Testdata);
+			String Testdata = excel.getCellData(sheetName, col, row);
+			String colName = excel.getCellData(sheetName, col, colsStartRowNum);
+			table.put(colName, Testdata);
 			}
 		data[i][0] = table;
 			i++;
@@ -92,27 +89,19 @@ public ReadExcel(String path)
 		  
 		  String cellText  = String.valueOf(cell.getNumericCellValue());
 		  if (HSSFDateUtil.isCellDateFormatted(cell)) {
-	           // format in form of M/D/YY
 			  double d = cell.getNumericCellValue();
-
 			  Calendar cal =Calendar.getInstance();
 			  cal.setTime(HSSFDateUtil.getJavaDate(d));
-	            cellText =
-	             (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
-	           cellText = cal.get(Calendar.MONTH)+1 + "/" +
-	                      cal.get(Calendar.DAY_OF_MONTH) + "/" +
-	                      cellText;
-	           
-	         
-
-	         }
-
-		  
-		  
+	                  cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
+	                  cellText = cal.get(Calendar.MONTH)+1 + "/" +
+	                  cal.get(Calendar.DAY_OF_MONTH) + "/" +
+	                  cellText;
+		  } 
 		  return cellText;
-	  }else if(cell.getCellType()==Cell.CELL_TYPE_BLANK)
+	    }else if(cell.getCellType()==Cell.CELL_TYPE_BLANK)
 	      return "";
-	  else 
+	     else 
+	     {
 		  return String.valueOf(cell.getBooleanCellValue());
 		}
 		catch(Exception e){
