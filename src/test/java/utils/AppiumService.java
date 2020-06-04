@@ -29,10 +29,10 @@ public class AppiumService {
 		builder.withIPAddress("0.0.0.0");
 		builder.usingPort(4733);
 		AppiumDriverLocalService local= AppiumDriverLocalService.buildService(builder);
-         local.start();
-         URL url = local.getUrl();
-         System.out.println(url);   
-	     DesiredCapabilities cap = new DesiredCapabilities();
+                local.start();
+                URL url = local.getUrl();
+                System.out.println(url);   
+	        DesiredCapabilities cap = new DesiredCapabilities();
  		cap.setCapability("platformName", ReadData.JSonFileReader("platformName"));
  		cap.setCapability("platformVersion", ReadData.JSonFileReader("platforVersion"));
  		cap.setCapability("deviceName", ReadData.JSonFileReader("devicename"));
@@ -42,9 +42,9 @@ public class AppiumService {
  		cap.setCapability("appActivity", ReadData.JSonFileReader("appActivity"));
 // 		cap.setCapability("noSign", "true");
  		cap.setCapability("automationName", "appium");
- 	    System.out.println("stop");
+ 	        System.out.println("stop");
  		 driver=new AndroidDriver(url, cap);		
-	    System.out.println("register");
+	        System.out.println("register");
  		Thread.sleep(10000);
 	 
 	}
